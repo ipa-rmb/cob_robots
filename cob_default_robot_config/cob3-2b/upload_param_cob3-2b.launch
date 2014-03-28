@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<launch>
+
+	<!-- send ROBOT parameters to parameter server -->
+	<rosparam command="load" ns="/script_server/tray" file="$(find cob_default_robot_config)/cob3-2b/tray_joint_configurations.yaml"/>
+	<rosparam command="load" ns="/script_server/torso" file="$(find cob_default_robot_config)/cob3-2b/torso_joint_configurations.yaml"/>
+	<rosparam command="load" ns="/script_server/head" file="$(find cob_default_robot_config)/cob3-2b/head_joint_configurations.yaml"/>
+	<rosparam command="load" ns="/script_server/arm" file="$(find cob_default_robot_config)/cob3-2b/arm_joint_configurations.yaml"/>
+	<rosparam command="load" ns="/script_server/sdh" file="$(find cob_default_robot_config)/cob3-2b/sdh_joint_configurations.yaml"/>
+	<rosparam command="load" ns="/script_server/light" file="$(find cob_default_robot_config)/cob3-2b/light_configurations.yaml"/>
+	<rosparam command="load" ns="/script_server/sound" file="$(find cob_default_robot_config)/cob3-2b/sound_configurations.yaml"/>
+	
+</launch>
