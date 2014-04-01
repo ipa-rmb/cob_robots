@@ -27,7 +27,7 @@
   <include filename="$(find cob_description)/urdf/lookat/lookat.urdf.xacro" />
 
   <!-- arm -->
-  <include filename="$(find schunk_description)/urdf/lwa/lwa.urdf.xacro" />
+  <include filename="$(find schunk_description)/urdf/lwa4d/lwa4d.urdf.xacro" />
 
   <!-- sdh -->
   <include filename="$(find schunk_description)/urdf/sdh/sdh.urdf.xacro" />
@@ -46,10 +46,18 @@
     <origin xyz="${torso_x} ${torso_y} ${torso_z}" rpy="${torso_roll} ${torso_pitch} ${torso_yaw}" />
   </xacro:torso>
   
-  <xacro:schunk_lwa name="arm" parent="base_link">
+  <xacro:schunk_lwa4d name="arm" parent="base_link">
     <origin xyz="${arm_x} ${arm_y} ${arm_z}" rpy="${arm_roll} ${arm_pitch} ${arm_yaw}" />
-  </xacro:schunk_lwa>
+  </xacro:schunk_lwa4d>
   
+  <joint name="arm_toolchanger_fixed_joint" type="fixed">
+    <parent link="arm_7_link" />
+    <child link = "arm_toolchanger_link" />
+    <origin xyz="0.0 0.0 0.095" rpy="0.0 0.0 0.0" />
+  </joint>
+	
+  <link name="arm_toolchanger_link" />
+
   <xacro:head name="head" parent="torso_upper_neck_tilt_link">
     <origin xyz="${head_x} ${head_y} ${head_z}" rpy="${head_roll} ${head_pitch} ${head_yaw}" />
   </xacro:head>
@@ -59,7 +67,7 @@
     <axis xyz="-1 0 0"/>
   </xacro:lookat>
   
-  <xacro:schunk_sdh name="sdh" parent="arm_7_link">
+  <xacro:schunk_sdh name="sdh" parent="arm_toolchanger_link">
     <origin xyz="${sdh_x} ${sdh_y} ${sdh_z}" rpy="${sdh_roll} ${sdh_pitch} ${sdh_yaw}" />
   </xacro:schunk_sdh>
   

@@ -55,20 +55,20 @@
 	<property name="def_head_yaw" value="0.0"/>
 
 	<!-- arm mount positions | relative to base_link -->
-	<property name="def_arm_x" value="0.040"/>
+	<property name="def_arm_x" value="0.020"/> <!-- 0.040 -->
 	<property name="def_arm_y" value="-0.005"/>
-	<property name="def_arm_z" value="0.83637"/>
-	<property name="def_arm_roll" value="3.1415926"/>
-	<property name="def_arm_pitch" value="0.7854"/>
-	<property name="def_arm_yaw" value="-1.8326"/>
+	<property name="def_arm_z" value="0.83637"/>  <!-- 0.83637 -->
+	<property name="def_arm_roll" value="0.1"/>  <!--3.1415926  3. x (new x)-->
+	<property name="def_arm_pitch" value="-0.79"/> <!-- 0.7854  2. y (new y) -->
+	<property name="def_arm_yaw" value="1.0"/> <!-- -1.8326     1. z -->
 	
 	<!-- sdh mount positions | relative to arm_7_link -->
 	<property name="def_sdh_x" value="0.0"/>
 	<property name="def_sdh_y" value="0.0"/>
 	<property name="def_sdh_z" value="0.0"/>
 	<property name="def_sdh_roll" value="0.0"/>
-	<property name="def_sdh_pitch" value="3.1415926"/>
-	<property name="def_sdh_yaw" value="0.0"/>
+	<property name="def_sdh_pitch" value="0.0"/> <!--3.1415926-->
+	<property name="def_sdh_yaw" value="0.79"/>
 
 	<!-- *********************************** -->
 	<!-- kinematic chain reference positions -->
@@ -111,7 +111,7 @@
 	<property name="def_cam_l_z" value="0.0"/>
 	<property name="def_cam_l_roll" value="0.0"/>
 	<property name="def_cam_l_pitch" value="0.0"/>
-	<property name="def_cam_l_yaw" value="3.1415926"/>
+	<property name="def_cam_l_yaw" value="0.0"/>
 
 	<!-- right | stereo baseline calibration | relative to cam_reference_link -->
 	<property name="def_cam_r_x" value="0.12"/>
@@ -119,7 +119,7 @@
 	<property name="def_cam_r_z" value="0.0"/>
 	<property name="def_cam_r_roll" value="0.0"/>
 	<property name="def_cam_r_pitch" value="0.0"/>
-	<property name="def_cam_r_yaw" value="3.1415926"/>
+	<property name="def_cam_r_yaw" value="0.0"/>
 
 	<!-- cam3d | handeye calibration | relative to cam_reference_link -->
 	<property name="def_cam3d_x" value="0.06"/>
@@ -127,5 +127,5 @@
 	<property name="def_cam3d_z" value="0.0"/>
 	<property name="def_cam3d_roll" value="0.0"/>
 	<property name="def_cam3d_pitch" value="0.0"/>
-	<property name="def_cam3d_yaw" value="3.1415926"/>
+	<property name="def_cam3d_yaw" value="-3.1415"/>
 </robot>
