@@ -9,14 +9,20 @@
 	<arg name="throttle" default="false"/>
 	<arg name="flip" default="true"/>
 	<arg name="sim" default="false"/>
+	<arg name="high_res_rgbd" default="false"/>
 
-	<include unless="$(arg sim)" file="$(find cob_bringup)/drivers/openni2.launch">
-		<arg name="robot" value="$(arg robot)"/>
-		<arg name="device_id" default="$(arg device_id)"/>
-		<arg name="name" value="$(arg name)"/>
-		<arg name="data_skip" value="$(arg data_skip)"/>
-		<arg name="num_worker_threads" value="$(arg num_worker_threads)"/>
-	</include>
+	<group unless="$(arg sim)">
+		<include unless="$(arg high_res_rgbd)" file="$(find cob_bringup)/drivers/openni2.launch">
+			<arg name="robot" value="$(arg robot)"/>
+			<arg name="device_id" default="$(arg device_id)"/>
+			<arg name="name" value="$(arg name)"/>
+			<arg name="data_skip" value="$(arg data_skip)"/>
+			<arg name="num_worker_threads" value="$(arg num_worker_threads)"/>
+		</include>
+		<include if="$(arg high_res_rgbd)" file="$(find kinect)/ros/launch/kinect.launch">
+			<arg name="camera" value="$(arg name)"/>
+		</include>
+	</group>
 	<include file="$(find cob_bringup)/tools/hz_monitor.launch">
 		<arg name="robot" value="$(arg robot)"/>
 		<arg name="yaml_name" value="$(arg name)"/>
