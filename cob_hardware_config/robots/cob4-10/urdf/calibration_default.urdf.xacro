@@ -116,13 +116,21 @@
 	<xacro:property name="def_torso_cam3d_down_pitch" value="0.61086"/>
 	<xacro:property name="def_torso_cam3d_down_yaw" value="0.0"/>
 
-	<!-- cam3d | handeye calibration | relative to sensorring_link -->
-	<xacro:property name="def_sensorring_cam3d_front_x" value="0.096"/>
+	<!-- cam3d RC Visard 160 | handeye calibration | relative to sensorring_link -->
+	<xacro:property name="def_sensorring_cam3d_front_x" value="0.122"/>
+	<xacro:property name="def_sensorring_cam3d_front_y" value="0.081"/>
+	<xacro:property name="def_sensorring_cam3d_front_z" value="0.040"/>
+	<xacro:property name="def_sensorring_cam3d_front_roll" value="-1.57079"/>
+	<xacro:property name="def_sensorring_cam3d_front_pitch" value="0.0"/>
+	<xacro:property name="def_sensorring_cam3d_front_yaw" value="-1.57079"/>
+
+	<!-- cam3d SICK Visionary T | handeye calibration | relative to sensorring_link -->
+	<!--xacro:property name="def_sensorring_cam3d_front_x" value="0.096"/>
 	<xacro:property name="def_sensorring_cam3d_front_y" value="0.0"/>
 	<xacro:property name="def_sensorring_cam3d_front_z" value="0.0195"/>
 	<xacro:property name="def_sensorring_cam3d_front_roll" value="3.14"/>
 	<xacro:property name="def_sensorring_cam3d_front_pitch" value="0.38"/>
-	<xacro:property name="def_sensorring_cam3d_front_yaw" value="0.0"/>
+	<xacro:property name="def_sensorring_cam3d_front_yaw" value="0.0"/-->
 
 	<!-- cam3d | handeye calibration | relative to sensorring_link -->
 	<xacro:property name="def_sensorring_cam3d_back_x" value="-0.096"/>

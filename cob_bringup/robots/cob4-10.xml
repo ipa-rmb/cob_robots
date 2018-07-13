@@ -250,7 +250,13 @@
 			</include>
 		</group>
 
-		<include file="$(find cob_bringup)/components/cam3d_visionary_t.launch">
+		<include file="$(find cob_bringup)/components/cam3d_rc_visard160.launch">
+			<arg name="robot" value="$(arg robot)"/>
+			<arg name="name" value="sensorring_cam3d_front"/>
+			<arg name="sim" value="$(arg sim)"/>
+		</include>
+
+		<!--include file="$(find cob_bringup)/components/cam3d_visionary_t.launch">
 			<arg name="robot" value="$(arg robot)"/>
 			<arg name="name" value="sensorring_cam3d_front"/>
 			<arg name="sim" value="$(arg sim)"/>
@@ -263,7 +269,7 @@
 			<arg name="data_skip" value="0"/>
 			<arg name="num_worker_threads" value="2"/>
 			<arg name="sim" value="$(arg sim)"/>
-		</include>
+		</include-->
 	</group>
 
 	<group>

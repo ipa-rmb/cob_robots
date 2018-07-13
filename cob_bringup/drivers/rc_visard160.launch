@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<launch>
+
+	<arg name="robot" default="$(optenv ROBOT !!NO_ROBOT_SET!!)"/>
+	<arg name="name" default="cam3d"/>
+
+	<node pkg="rc_visard_driver" type="rc_visard_driver" name="rc_visard" ns="$(arg name)" output="screen">
+		<param name="device" value="rc_visard"/>
+		<!--remap from="$(arg name)/stereo/left/camera_info" to="$(arg name)/depth/camera_info"/>
+		<remap from="$(arg name)/stereo/points2" to="$(arg name)/depth/points"/-->
+	</node>
+
+</launch>
