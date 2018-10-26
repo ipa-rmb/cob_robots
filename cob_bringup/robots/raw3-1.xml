@@ -79,6 +79,11 @@
 		<include file="$(find cob_bringup)/tools/battery_monitor.launch">
 			<arg name="robot" value="$(arg robot)"/>
 		</include>
+		<!--include file="$(find nuvation_nuv300_bms_driver)/ros/launch/nuvation_nuv300_bms_driver.launch">
+			<!-arg name="robot" value="$(arg robot)"/->
+			<arg name="bms_ip_address" value="192.168.41.110"/>
+			<arg name="bms_port" value="502"/>
+		</include-->
 		<include file="$(find cob_bringup)/tools/emergency_stop_monitor.launch">
 			<arg name="robot" value="$(arg robot)"/>
 		</include>
