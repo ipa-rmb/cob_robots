@@ -32,12 +32,27 @@
 	<xacro:property name="def_tower_yaw" value="3.14159265359"/>
 
 	<!--torso mount positions (torso_0_link) | relative to base_link-->
-	<xacro:property name="def_torso_x" value="0.166"/>
+	<!-- Pre-Calibration values -->
+	<!-- <xacro:property name="def_torso_x" value="0.166"/>
 	<xacro:property name="def_torso_y" value="0.2175"/>
 	<xacro:property name="def_torso_z" value="0.302"/>
 	<xacro:property name="def_torso_roll" value="0.0"/>
 	<xacro:property name="def_torso_pitch" value="0.0"/>
-	<xacro:property name="def_torso_yaw" value="1.57079632679"/>
+	<xacro:property name="def_torso_yaw" value="1.57079632679"/> -->
+
+	<!-- Calibrated values -->
+	<xacro:property name="def_torso_x" value="0.1494"/>
+	<xacro:property name="def_torso_y" value="0.233741"/>
+	<xacro:property name="def_torso_z" value="0.297897"/>
+	<xacro:property name="def_torso_roll" value="-0.00331616"/>
+	<xacro:property name="def_torso_pitch" value="-0.00269065"/>
+	<xacro:property name="def_torso_yaw" value="1.54326"/>
+	<!-- <xacro:property name="def_torso_x" value="0.15454"/>
+	<xacro:property name="def_torso_y" value="0.224087"/>
+	<xacro:property name="def_torso_z" value="0.298804"/>
+	<xacro:property name="def_torso_roll" value="-0.0144334"/>
+	<xacro:property name="def_torso_pitch" value="0.00357975"/>
+	<xacro:property name="def_torso_yaw" value="1.56128"/> -->
 
 	<!-- head mount positions | relative to head_cover_link -->
 	<xacro:property name="def_head_x" value="0.0"/>
@@ -48,12 +63,27 @@
 	<xacro:property name="def_head_yaw" value="0.0"/>
 
 	<!--arm mount positions | relative to base_link-->
-	<xacro:property name="def_arm_x" value="0.324"/>
+	<!-- Pre-Calibration values -->
+	<!-- <xacro:property name="def_arm_x" value="0.324"/>
 	<xacro:property name="def_arm_y" value="-0.191"/>
 	<xacro:property name="def_arm_z" value="0.585"/>
 	<xacro:property name="def_arm_roll" value="0.0"/>
 	<xacro:property name="def_arm_pitch" value="0.0"/>
-	<xacro:property name="def_arm_yaw" value="-2.3562"/>
+	<xacro:property name="def_arm_yaw" value="-2.3562"/> -->
+
+	<!-- Calibrated values -->
+	<xacro:property name="def_arm_x" value="0.306238"/>
+	<xacro:property name="def_arm_y" value="-0.183789"/>
+	<xacro:property name="def_arm_z" value="0.5793"/>
+	<xacro:property name="def_arm_roll" value="0.000849562"/>
+	<xacro:property name="def_arm_pitch" value="0.0225778"/>
+	<xacro:property name="def_arm_yaw" value="-2.36424"/>
+	<!-- <xacro:property name="def_arm_x" value="0.313998"/>
+	<xacro:property name="def_arm_y" value="-0.183157"/>
+	<xacro:property name="def_arm_z" value="0.566428"/>
+	<xacro:property name="def_arm_roll" value="-0.00611175"/>
+	<xacro:property name="def_arm_pitch" value="0.0158204"/>
+	<xacro:property name="def_arm_yaw" value="-2.36499"/> -->
 
 	<!-- gripper mount positions | relative to arm_ee_link -->
 	<xacro:property name="def_gripper_x" value="0.0"/>
