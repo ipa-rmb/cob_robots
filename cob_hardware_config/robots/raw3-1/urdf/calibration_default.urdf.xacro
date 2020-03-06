@@ -72,12 +72,32 @@
 	<xacro:property name="def_arm_yaw" value="-2.3562"/> -->
 
 	<!-- Calibrated values -->
-	<xacro:property name="def_arm_x" value="0.306238"/>
+	<!-- arm_base_link mount positions | camera_base_calibration | relative to base_link-->
+	<xacro:property name="def_arm_x" value="0.318929"/>
+	<xacro:property name="def_arm_y" value="-0.188408"/>
+	<xacro:property name="def_arm_z" value="0.573711"/>
+	<xacro:property name="def_arm_roll" value="0.0105389"/>
+	<xacro:property name="def_arm_pitch" value="0.014375"/>
+	<xacro:property name="def_arm_yaw" value="-2.36603"/>
+	
+	<!--property name="def_arm_x" value="0.321514"/>
+	<property name="def_arm_y" value="-0.188723"/>
+	<property name="def_arm_z" value="0.575413"/>
+	<property name="def_arm_roll" value="0.00764841"/>
+	<property name="def_arm_pitch" value="0.0187387"/>
+	<property name="def_arm_yaw" value="-2.36936"/-->
+	<!--xacro:property name="def_arm_x" value="0.292915"/>
+	<xacro:property name="def_arm_y" value="-0.151959"/>
+	<xacro:property name="def_arm_z" value="0.570404"/>
+	<xacro:property name="def_arm_roll" value="0.0100785"/>
+	<xacro:property name="def_arm_pitch" value="0.0230791"/>
+	<xacro:property name="def_arm_yaw" value="-2.36751"/-->
+	<!--xacro:property name="def_arm_x" value="0.306238"/>
 	<xacro:property name="def_arm_y" value="-0.183789"/>
 	<xacro:property name="def_arm_z" value="0.5793"/>
 	<xacro:property name="def_arm_roll" value="0.000849562"/>
 	<xacro:property name="def_arm_pitch" value="0.0225778"/>
-	<xacro:property name="def_arm_yaw" value="-2.36424"/>
+	<xacro:property name="def_arm_yaw" value="-2.36424"/-->
 	<!-- <xacro:property name="def_arm_x" value="0.313998"/>
 	<xacro:property name="def_arm_y" value="-0.183157"/>
 	<xacro:property name="def_arm_z" value="0.566428"/>
